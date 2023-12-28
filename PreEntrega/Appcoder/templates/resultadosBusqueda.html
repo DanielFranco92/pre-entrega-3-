@@ -1,0 +1,24 @@
+{% extends 'inicio.html' %}
+
+
+{% block buscar %}
+    <div>
+        <h2>Estamos buscando el: {{camada}}</h2>
+
+        {% if cursos %}
+
+        <ul class="list-group">
+            {% for curso in cursos %}
+                <li class="list-group-item list-group-item-dark">{{curso.nombre}}</li>
+                <li class="list-group-item list-group-item-success">{{curso.camada}}</li>
+            {% endfor%}
+        </ul>
+        {% else %}
+            <p class="list-group-item list-group-item-danger">No existe esa camada</p>
+        {% endif %}
+    </div>
+{% endblock %}
+
+
+
+

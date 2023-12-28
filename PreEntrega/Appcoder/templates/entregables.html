@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter Nombre">
+        </div>
+    
+        <div class="form-group">
+            <label for="fechaDeEntrega">Fecha de Entrega:</label>
+            <input type="date" class="form-control" id="fechaDeEntrega" name="fechaDeEntrega" placeholder="Enter Fecha de Entrega">
+        </div>
+    
+        <div class="checkbox">
+            <label for="entregado"><input type="checkbox" id="entregado" name="entregado">Entregado:</label> 
+        </div>
+    
+        <button type="submit" class="btn btn-default">Enviar</button>
+    </form>
+</div>
+
+{% endblock %}

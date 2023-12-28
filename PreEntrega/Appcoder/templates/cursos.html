@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="nombre">Curso:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter Curso">
+        </div>
+        
+        <div class="form-group">
+            <label for="camada">Camada:</label>
+            <input type="number" class="form-control" id="camada" name="camada" placeholder="Enter Camada">
+        </div>
+
+        <button type="submit" class="btn btn-default">Enviar</button>
+    </form>
+</div>
+
+{% endblock %}
